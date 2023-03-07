@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="super.css">
+    <link rel="shortcut icon" href="./super.assest/asset 0.png" type="image/x-icon">
+    <title>Super Click</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8325754314842230"
+     crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
+
+</head>
+
+<body>
+    <!-- <div class="loading" onload="gifHandler()"> -->
+        <!-- <div class="loader-img"></div>
+    </div> -->
+    
+
+<div  id="hide-all">
+    <nav style="position:sticky;top:0;z-index: 1" class="navbar navbar-expand-lg bg-black p-3">
+        <div class="container-fluid">
+        
+          <a class="navbar-brand" href="#"><img src="./super.assest/asset 0.png" class="reSize-img " alt="" height="30px"></a>
+          <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./conatct.html">Contact</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Store
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">MEN</a></li>
+                  <li><a class="dropdown-item" href="#">WOMEN</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">KIDS</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white">Sale</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="">Review</a>
+              </li>
+            </ul>
+            
+              <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#exampleModal">Login Now</button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
+        <!-- Launch demo modal
+    </button> -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>Login Page</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="display-tag" class="alert alert-success d-none">New Student Enrolled</p>
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control" id="input-field" placeholder="Username"
+                        onkeydown="userNameHandler()">
+                    <label for="input-field">Username</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="email" class="form-control" id="input-field2" placeholder="example@gmail.com">
+                    <label for="input-field">example@gmail.com</label>
+                </div>
+                <button class="btn btn-primary mb-3" onclick="enrollHandler()">Login Now</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+      <!-- <div style="width:98.92vw;" class="carousel" data-flickity='{ "autoPlay": 1500 }'>
+        <div class="carousel-cell"><img src="./super.assest/asset 12.jpeg" alt="" class="reSize-img"></div>
+        <div class="carousel-cell"><img src="./super.assest/asset 14.jpeg" alt="" class="reSize-img"></div>
+        
+        <div class="carousel-cell"><img src="./super.assest/AIR.jpg" alt="" class="reSize-img"></div>
+        <div class="carousel-cell"><img src="./super.assest/AIR.jpg" alt="" class="reSize-img"></div>
+       
+      </div> -->
+
+
+      <div style="width:99vw;" class="carousel" data-flickity='{ "fullscreen": true,"autoPlay": 1500  }'>
+        <img class="carousel-image reSize-img" src="./assets/asset 12.jpeg" />
+        <img class="carousel-image reSize-img" src="./assets/asset 13.jpeg" />
+        <img class="carousel-image reSize-img" src="./assets/asset 14.jpeg" />
+        <img class="carousel-image reSize-img" src="./assets/asset 15.jpeg" />
+        <img class="carousel-image reSize-img" src="./assets/asset 16.jpeg" />
+        <img class="carousel-image reSize-img" src="./super.assest/asset 12.jpeg"/>
+        <img class="carousel-image reSize-img" src="./assets/asset 14.jpeg" />
+        <!-- <img class="carousel-image reSize-img" src="" />
+        <img class="carousel-image reSize-img" src="" />
+        <img class="carousel-image reSize-img" src="" />
+        <img class="carousel-image reSize-img" src="" />
+        <img class="carousel-image reSize-img" src="" /> -->
+    </div>
+    
+
+    <!-- <header>
+        <div class="header-img" id="get-image">
+            <img src="./super.assest/asset 12.jpeg" alt="" class="reSize-img">
+        </div>
+    </header> -->
+    <div class="wrap-all-section">
+    <section class="m-5">
+        
+            <h2 class="content">NEW ARRIVAL</h2>
+        
+        <div class="flex-wrap-card">
+            <div class="inner-card">
+                <img src="./super.assest/asset 3.webp" alt="" class="reSize-img">
+                <div class="card-content">
+                    <small class="">Nike</small>
+                    <div class="card-p">BLAZER LOWW 'SAIL/BLACK'</div>
+                    <span class="col-lg">₹8,525</span>
+                </div>
+            </div>
+            <div class="inner-card">
+                <img src="./super.assest/asset 4.webp" alt="" class="reSize-img">
+                <div class="card-content">
+                    <small class="">Nike</small>
+                    <div class="card-p">AIR MAX PLUS SE'WHITE'</div>
+                    <span class="col-lg">₹15,525</span>
+                </div>
+            </div>
+            <div class="inner-card">
+                <img src="./super.assest/asset 2.webp" alt="" class="reSize-img">
+                <div class="card-content">
+                    <small class="">Nike</small>
+                    <div class="card-p">WMN'S BLAZER 'JUMBO PINK'</div>
+                    <span class="col-lg">₹5,450</span>
+                </div>
+            </div>
+            <div class="inner-card">
+                <img src="./super.assest/asset 5.jpeg" alt="" class="reSize-img">
+                <div class="card-content">
+                    <small class="">Adiddas originals</small>
+                    <div class="card-p">NMD S1 'WHITE'</div>
+                    <span class="col-lg">₹54,050</span>
+                </div>
+            
+        </div>
+        
+    </section>
+
+
+    <section class="m-5">
+        
+        <h2 class="content">NEW ARRIVAL</h2>
+    
+    <div class="flex-wrap-card">
+        <div class="inner-card">
+            <img src="./assets/asset 1.webp" alt="" class="reSize-img">
+            <div class="card-content">
+                <small class="">Nike</small>
+                <div class="card-p">BLAZER LOWW 'SAIL/BLACK'</div>
+                <span class="col-lg">₹8,525</span>
+            </div>
+        </div>
+        <div class="inner-card">
+            <img src="./assets/asset 2.webp" alt="" class="reSize-img">
+            <div class="card-content">
+                <small class="">Nike</small>
+                <div class="card-p">AIR MAX PLUS SE'WHITE'</div>
+                <span class="col-lg">₹15,525</span>
+            </div>
+        </div>
+        <div class="inner-card">
+            <img src="./assets/asset 3.jpeg" alt="" class="reSize-img">
+            <div class="card-content">
+                <small class="">Nike</small>
+                <div class="card-p">WMN'S BLAZER 'JUMBO PINK'</div>
+                <span class="col-lg">₹5,450</span>
+            </div>
+        </div>
+        <div class="inner-card">
+            <img src="./assets/asset 4.jpeg" alt="" class="reSize-img">
+            <div class="card-content">
+                <small class="">Adiddas originals</small>
+                <div class="card-p">NMD S1 'WHITE'</div>
+                <span class="col-lg">₹54,050</span>
+            </div>
+        
+    </div>
+    
+</section>
+<section class="m-5">
+        
+    <h2 class="content">POPULAR SHOE</h2>
+
+<div class="flex-wrap-card">
+    <div class="inner-card">
+        <img src="./assets/asset 18.jpeg" alt="" class="reSize-img">
+        <div class="card-content">
+            <small class="">Nike</small>
+            <div class="card-p">BLAZER LOWW 'SAIL/BLACK'</div>
+            <span class="col-lg">₹8,525</span>
+        </div>
+    </div>
+    <div class="inner-card">
+        <img src="./assets/asset 19.jpeg" alt="" class="reSize-img">
+        <div class="card-content">
+            <small class="">Nike</small>
+            <div class="card-p">AIR MAX PLUS SE'WHITE'</div>
+            <span class="col-lg">₹15,525</span>
+        </div>
+    </div>
+    <div class="inner-card">
+        <img src="./assets/asset 21.jpeg" alt="" class="reSize-img">
+        <div class="card-content">
+            <small class="">Nike</small>
+            <div class="card-p">WMN'S BLAZER 'JUMBO PINK'</div>
+            <span class="col-lg">₹5,450</span>
+        </div>
+    </div>
+    <div class="inner-card">
+        <img src="./assets/asset 20.jpeg" alt="" class="reSize-img">
+        <div class="card-content">
+            <small class="">Adiddas originals</small>
+            <div class="card-p">NMD S1 'WHITE'</div>
+            <span class="col-lg">₹54,050</span>
+        </div>
+    
+</div>
+
+</section>
+
+
+    <section class="m-5">
+        
+        <div class="flex-all-card">
+        <div class="all-card">
+            <img src="./super.assest/asset 9.jpeg" alt="" class="reSize-img">
+        </div>
+        <div class="all-card">
+            <img src="./super.assest/asset 10.jpeg" alt="" class="reSize-img">
+        </div>
+        <div class="all-card">
+            <img src="./super.assest/asset 11.jpeg" alt="" class="reSize-img">
+        </div>
+    </div>
+    </section>
+
+    <section class="m-6">
+        <h2 class="content">STORES</h2>
+        <div class="flex-stores-img">
+            <div class="all-store">
+                <img src="./super.assest/asset 21.jpeg" alt="" class="reSize-img">
+            </div>
+            <div class="all-store">
+                <img src="./super.assest/asset 22.jpeg" alt="" class="reSize-img">
+            </div>
+            <div class="all-store">
+                <img src="./super.assest/asset 23.jpeg" alt="" class="reSize-img">
+            </div>
+            <div class="all-store">
+                <img src="./super.assest/asset 20.webp" alt="" class="reSize-img">
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+    <hr>
+    <div class="some-down-content">
+        <div class="content-one">
+            <p><i class="bi bi-map"></i></p>
+            <p> India-wide Shipping <br> Average time: 4-6 days</p>
+        </div>
+        <div class="content-two">
+            <p><i class="bi bi-shield-lock"></i></p>
+            <p>100% Secure Checkout <br>  UPI / Debit Card / Credit Card/ Net Banking</p>
+        </div>
+    </div>
+    <hr>
+    <section class="m-5">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Lorem ipsum dolor sit amet consectetur.
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis deserunt et non, itaque alias ab eveniet ut repellat voluptate perferendis ad expedita labore laborum voluptatum! Necessitatibus sint omnis dolor impedit.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Lorem ipsum dolor sit amet consectetur.
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In similique recusandae, ea aliquid quia odit quaerat excepturi animi possimus earum.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos neque laborum unde esse reiciendis nam ratione minima accusamus facilis laudantium.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <footer>
+        <div class="wrap-footer">
+            <div class="inside-footer">
+                <ul>
+                    <li>Important-link</li>
+                </ul>
+                <ul>
+                    <li>Refunds/Cancellation</li>
+                    <li>Terms and Conditions</li>
+                    <li>FAQ</li>
+                    <li>Privacy Policy</li>
+                    <li>Shipping</li>
+                </ul>
+            </div>
+            <div class="inside-footer">
+                <ul>
+                    <li>NEED HELP?</li>
+                </ul>
+                <ul>
+                    <li>My Account</li>
+                    <li>Terms and Conditions</li>
+                    <li>Size Chart</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="inside-footer">
+                <ul>
+                    <li>FOLLOW</li>
+                </ul>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                </ul>
+            </div>
+
+            <div class="inside-footer">
+                <ul>
+                    <li>SUBSCRIBE TO OUR NEWSLETTER</li>
+                </ul>
+                <ul>
+                    <li>Join our mailing list to receive the latest news.</li>
+                </ul>
+                <ul>
+                    <li><input type="text" name="" id=""></li>
+                    <li><button class="btn">Subscribe</button></li>
+                </ul>
+            </div>
+        
+        </div>
+    </footer> -->
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="text-white fs-3 m-1" href=""><i class="bi bi-facebook"></i></a>
+  
+        <!-- Twitter -->
+        <a href="" class="text-white fs-3 m-1"><i class="bi bi-twitter"></i></i></a>
+        <!-- Google -->
+        <a href="" class="text-white fs-3 m-1"><i class="bi bi-google"></i></i></a>
+  
+        <!-- Instagram -->
+        <a href="" class="text-white fs-3 m-1"><i class="bi bi-instagram"></i></a>
+  
+        <!-- Linkedin -->
+        <a href="" class="text-white fs-3 m-1"><i class="bi bi-linkedin"></i></a>
+  
+        <!-- Github -->
+        <a href="" class="text-white fs-3 m-1"><i class="bi bi-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example21" class="form-control" />
+                <!-- <label class="form-label" for="form5Example21">Email address</label> -->
+              </div>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-success mb-4">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+  
+      <!-- Section: Text -->
+      <section class="mb-4">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+          repellat.
+        </p>
+      </section>
+      <!-- Section: Text -->
+  
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">IMPORTANT LINKS</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Refunds/Cancellation</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">
+                    Terms and Conditions</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Shipping</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">NEED HELP?</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">My Account</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Size Chart</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Contact Us</a>
+              </li>
+             
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white text-decoration-none" href="">Made by: Abhishek sharma</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</div>
+  <!-- Footer -->
+    <script src="./App.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="//code.tidio.co/hihpu6qearfnx1kdoynrlpfnm8kcwszq.js" async></script>
+</body>
+
+</html>
